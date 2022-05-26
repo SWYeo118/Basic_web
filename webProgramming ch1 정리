@@ -26,3 +26,12 @@ vscode output에 아래와 같이 해결하라는 메세지가 나왔다.
 email 주소는 내 github 로그인 주소를 사용했고, 이름은 그냥 github id 등록 시 사용한 이름을 사용했다.
 git config --global user.email "effortmeta@gmail.com" 
 git config --global user.name "Yeo sangwoo"
+
+파일을 업데이트 한 것 같은데 제대로 merge가 되지 않아서 아래의 코드를 사용하여 master를 merge했다
+git config pull.rebase false
+
+<vscode를 처음 설치하며 추가로 install한 extension들>
+- Git History = 깃허브와 vscode를 연결하여 로그를 확인하거나 바로바로 업로드할 수 있도록 하는 익스텐션
+- Live Server = html이나 JSP 할 때 매번 새로고침 해 줄 필요 없이 파일의 수정사항을 저장하면 바로 웹페이지에 변화내용이 업데이트됨
+- MySQL = MySQL 관련 익스텐션인 것 같은데 제일 위에있는 두 개를 다운로드받았음
+- One Dark Pro = vscode 어두운 테마. 글씨가 잘 보이도록 함
