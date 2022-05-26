@@ -9,6 +9,7 @@ git remote -v = 리모트로 연결됨을 확인
 git push -u origin master = 리모트 origin에 로컬 master를 푸시하도록 하겠다.(가장 첫 commit 후 push에만 이렇게 하고, 이후에는 git push만 해도 된다)
 
 <vscode 단축키>
+! + enter 하면 html 기본 형식이 바로 입력된다!
 vscode 주석달기 단축키 = control + /
 target에 "aaaa" 같은걸 넣어놓으면 새 탭으로 열릴 때 그 탭의 이름이 aaaa가 된다.
 table>tr*5>td*2  = tr이 5개짜리 td를 2개를 만들도록 태그를 한번에 만들어준다.
