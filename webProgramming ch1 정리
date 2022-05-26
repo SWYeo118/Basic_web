@@ -17,6 +17,8 @@ ul>li*5 = 리스트 ul 안에 li 5개짜리를 만들도록 태그를 한번에 
 <기타 정리할 내용>
 html에서 tr 한 번은 1행을 의미하고 그 하위의 td들은 각각 1열, 2열, 3열... 씩을 의미한다.
 colspan은 가로로 열 병합하는 것을 의미하고, rowspan은 세로로 행 병합을 의미한다.
+https://www.w3schools.com/html/html_links.asp에 들어가면 html 사용 시 각 태그의 예시와 의미를 알려준다 참고할것
+https://github.com/junsuk5/web 웹프로그래밍 강의하시는 김준석교수님 깃허브 주소
 
 <해결한 오류>
 save changes로 올라가긴 하는데, 커밋 + push가 안되는 오류가 발생
