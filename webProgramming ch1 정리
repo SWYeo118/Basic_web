@@ -1,10 +1,28 @@
-주석달기 = control + /
-target에 "aaaa" 같은걸 넣어놓으면 새 탭으로 열릴 때 그 탭의 이름이 aaaa가 된다.
+<Terminal git 명령어들>
 git init = git 활성화하여 새로운 repository 만들기
-git add . = 버전을 관리할 파일을 지정
+git add . = 버전을 관리할 파일을 지정(git add 파일명 = 하면 관리할 해당 파일만을 add하고, .을 사용하면 모든 파일을 관리한다)
 git status = repository 상태 보기
 git log = 커밋 이력
 git commit -m "메세지" = 메세지를 넣어서 커밋하기
 git remote add origin https://github.com/SWYeo118/webProgramming.git 하면 이 repository에 remote로 연결한다
 git remote -v = 리모트로 연결됨을 확인
-git push -u origin master = 리모트 origin에 로컬 master를 푸시하도록 하겠다.
+git push -u origin master = 리모트 origin에 로컬 master를 푸시하도록 하겠다.(가장 첫 commit 후 push에만 이렇게 하고, 이후에는 git push만 해도 된다)
+
+<vscode 단축키>
+vscode 주석달기 단축키 = control + /
+target에 "aaaa" 같은걸 넣어놓으면 새 탭으로 열릴 때 그 탭의 이름이 aaaa가 된다.
+table>tr*5>td*2  = tr이 5개짜리 td를 2개를 만들도록 태그를 한번에 만들어준다.
+ul>li*5 = 리스트 ul 안에 li 5개짜리를 만들도록 태그를 한번에 만들어준다.
+
+<기타 정리할 내용>
+html에서 tr 한 번은 1행을 의미하고 그 하위의 td들은 각각 1열, 2열, 3열... 씩을 의미한다.
+colspan은 가로로 열 병합하는 것을 의미하고, rowspan은 세로로 행 병합을 의미한다.
+
+<해결한 오류>
+save changes로 올라가긴 하는데, 커밋 + push가 안되는 오류가 발생
+vscode output에 아래와 같이 해결하라는 메세지가 나왔다.
+내가 vscode와 git을 연결한 아이디가 global로 연결되지 않아서인것 같아서 발생한 오류로 추정
+따라서 아래의 두 명령어를 입력하니 해결되었다.
+email 주소는 내 github 로그인 주소를 사용했고, 이름은 그냥 github id 등록 시 사용한 이름을 사용했다.
+git config --global user.email "effortmeta@gmail.com" 
+git config --global user.name "Yeo sangwoo"
