@@ -1,0 +1,94 @@
+1. <기본 html 구조 정리>
+<!DOCTYPE html>
+<!-- html이라고 이야기해주는 부분, doctype -->
+
+<html lang="en">
+<!-- english로 작성되었다고 이야기해주는 부분 -->
+
+<meta charset="UTF-8">
+<!-- 코드의 정보를 브라우저를 전달해주는 태그 = meta태그 -->
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- IE 호환을 위해 필요한 부분 -->
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- 모바일 기기 사이즈에 맞게 pc 웹페이지 스케일을 조정하는 태그-->
+
+<meta name="description" content="비디오 태그 연습">
+<!-- 웹사이트를 만들 때 어떤 내용인지에 대해서 설명해주는 태그. 검색할 때 도움이 된다.-->
+
+2. <audio tag 정리>
+<audio src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4" controls width="400"></audio>
+<!-- 오디오 소스를 해당 링크에서 받아온다. controls는 컨트롤 버튼(재생, 일시정지, 소리 등)을 생성해준다. -->
+
+3. iframe tag
+iframe은 하나의 페이지 내에 테이블처럼 공간을 만들어놓고 공간 안에 새로운 웹을 띄우는 형태로 유튜브 링크할 때와 같은 방법으로 사용이 가능하다
+
+4. CSS tag의 적용방식과 .css파일을 이용한 style 적용
+* 외부 선언방식(가장 이상적)
+<link rel="stylesheet" href="style.css">
+위와 같은 방식으로 link tag를 사용하고 style.css 파일에서 정의한 방식으로 css를 해당 클래스에 적용한다.
+위 선언은 'head 태그'에서 진행하고 style.css 파일은 동일한 디렉토리 내에 존재
+
+* 내부 선언방식
+  <style>
+    div {
+    width: 100px;
+    background-color: yellow;
+    font-size: 30px;
+    }
+  </style>
+BODY 내부에 스타일을 새로 정의를 함. 이 이후에 나타나는 div에 해당 스타일이 적용된다.
+외부선언방식에서 style.css 파일에 정의를 하는 것을 여기서는 동일 파일에서 작성해서 사용한다는 것이 차이점
+
+* 인라인 선언방식(굳이 사용하지 말자)
+  <div style="background-color: red;">
+  인라인 CSS
+  </div>
+해당 div나 span 내에서 스타일을 따로 선언해주는 방식인데, 굳이 주로 사용하지 말자.
+
+5. class, id 정의 및 사용
+  <!-- id는 한 개 밖에 존재할 수 없다. -->
+  <div id="div1">
+    div
+  </div>
+  <!-- style.css에 이렇게 정의하여 사용 -->
+  div1 {
+  background-color: aqua;
+  height: 300px;
+}
+  <!-- 클래스를 선언한 모습 -->
+  
+  <span class="red-text">
+    span 태그1
+  </span>
+  <!-- style.css에 이렇게 class select 하여 사용 -->
+  <!-- .을 찍으면 해당 클래스 이름이다. -->
+  .red-text {
+  color: red;
+}
+  .border{
+  border-style: solid;
+  border-width: 1px;
+}
+
+<!-- p 태그중에서 a클래스에만 적용되도록 선언 -->
+  p.a {
+  text-decoration: none;
+  color: grey;
+}
+
+<!-- a태그를 마우스로 위로 올리면 적용되는 클래스 -->
+a:hover {
+  color: white;
+}
+
+<!-- body 태그 내에 적용되도록 배경색과 font를 지정한 것 -->
+<!-- font-family는 앞에서부터 하나씩 적용이 된다. -->
+body {
+  background-color: blueviolet;
+  font-family: /* 본문용 서체 */
+  '-apple-system', 'BlinkMacSystemFont', 'Apple SD Gothic Neo',
+  'Inter', 'Spoqa Han Sans', 'Segoe UI', Sans-Serif,
+  'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
