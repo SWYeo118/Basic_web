@@ -1,0 +1,47 @@
+div {
+  background-color: aqua;
+  height: 300px;
+}
+
+body {
+  background-color: blueviolet;
+  font-family: /* 본문용 서체 */
+  '-apple-system', 'BlinkMacSystemFont', 'Apple SD Gothic Neo',
+  'Inter', 'Spoqa Han Sans', 'Segoe UI', Sans-Serif,
+  'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+
+p {
+  color: blue;
+}
+
+/* .을 찍어주면 클래스라는 것을 의미해줌 (class selector) */
+.red-text {
+  color: red;
+}
+.yellow-text {
+  color: yellow;
+}
+.blue-text {
+  color: blue;
+}
+.big-size{
+  font-size: 50px;
+}
+.border{
+  border-style: solid;
+  border-width: 1px;
+}
+
+/* id selector. id를 정의할 때는 #을 붙여서 사용한다. */
+#div1 {
+  background-color: blueviolet;
+}
+
+a {
+  text-decoration: none;
+  color: grey;
+}
+a:hover {
+  color: white;
+}
