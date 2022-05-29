@@ -29,6 +29,8 @@ iframe은 하나의 페이지 내에 테이블처럼 공간을 만들어놓고 �
 <link rel="stylesheet" href="style.css">
 위와 같은 방식으로 link tag를 사용하고 style.css 파일에서 정의한 방식으로 css를 해당 클래스에 적용한다.
 위 선언은 'head 태그'에서 진행하고 style.css 파일은 동일한 디렉토리 내에 존재
+외부선언할 때 주의할 점 -> underline, overline, color 여러 개 처럼 유사한 태그가 연속해서 나올 경우
+적용 순서가 있기 때문에 적용이 안될 수 있다.
 
 * 내부 선언방식
   <style>
