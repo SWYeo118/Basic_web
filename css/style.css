@@ -4,7 +4,7 @@ div {
 }
 
 body {
-  background-color: blueviolet;
+  background-color: navy;
   font-family: /* 본문용 서체 */
   '-apple-system', 'BlinkMacSystemFont', 'Apple SD Gothic Neo',
   'Inter', 'Spoqa Han Sans', 'Segoe UI', Sans-Serif,
@@ -15,7 +15,19 @@ p {
   color: blue;
 }
 
+text-decoration-overline-underlinetext-transform-uppercase-lowercasetext-indent
+font-familyfont-stylefont-sizefont-height
+
 /* .을 찍어주면 클래스라는 것을 의미해줌 (class selector) */
+.color {
+  color: aquamarine;
+}
+.text-align {
+  text-align: center;
+}
+.text-decoration-overline {
+  text-decoration-line: overline;
+}
 .red-text {
   color: red;
 }
