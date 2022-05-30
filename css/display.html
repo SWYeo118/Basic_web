@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>displayPractice</title>
+</head>
+<!-- div.div1 하면 div1이라는 클래스를 가진 div를 만들 수 있다 혹은 .div2 하면 바로 div가 생성됨 -->
+<body>
+  <style>
+    /* div를 inline 속성을 주면 span처럼 되고, span을 block 속성을 주면 div화 된다.
+       inline은 자기자신 크기만큼만 차지, block은 한 줄 전체를 차지(한 줄에 하나밖에 존재할 수 없다). 따라서 height width와 같이 크기설정이 가능 inline은 불가*/
+    span {
+      display: block;
+    }
+    /* inline-block 속성은 한 줄을 차지하지만, 실제 공간은 자기 자신 크기만큼만 차지함. inline-block은 크기설정 가능*/
+    /* display는 block, inline, inline-block 이렇게 세 개 */
+    div.div1 {
+      background-color: yellow;
+      display: inline-block;
+      /* 안쪽 마진 */
+      padding: 10px;
+      /* 바깥쪽 마진 */
+      margin: 30px;
+      width: 100px;
+      height: 50px;
+    }
+
+    div.div2 {
+
+      /* 
+      relatice는 div1을 기준으로 왼쪽으로 30, 아래로 30px 이동 
+      absolute는 절대적 화면 기준으로(static이 아닌 가장 가까운 태그 기준으로)!
+      fixed는 고정위치(창 아래에 고정적으로 위치하게 하는것과 같이)
+      sticky : 스크롤 내리면서 스크롤에 붙는 느낌
+      */
+      display: inline;
+      position: relative;
+      left: 30px;
+      top: 30px;
+      background-color: pink;
+    }
+
+    /* div{
+      display: inline;
+    } */
+  </style>
+  <div class="div1">div1</div>
+  <div class="div2">div2</div>
+  <div>div</div>
+  <div>div</div>
+  <span>span</span>
+  <span>span</span>
+  <h1>h1</h1>
+  <h1>h1</h1>
+  <header>header</header>
+  <footer>footer</footer>
+</body>
+</html>
