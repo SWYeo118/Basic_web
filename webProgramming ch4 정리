@@ -1,3 +1,12 @@
+<JavaScript 적용 방식>
+
+1. 내부 선언방식
+<script>alert(1);</script> 과 같이 script 태그를 앞뒤에 새로 선언해서 진행
+
+2. 외부 선언방식
+<script src="javascript.js"></script> 와 같이 스크립트를 선언하긴 하지만 src를 다른 .js파일을 만들어서 해당 script문을 작성하여 적용
+
+
 <JavaScript의 특징>
 
 1. javascript에서는 var를 지금까지 많이 썼지만 사실 var는 
