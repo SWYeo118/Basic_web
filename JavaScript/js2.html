@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+// onload 하면 script가 다 끝이 나고 나서 onload가 동작된다.
+<body onload = "init()">
+  <style>
+    .small-text {
+      font-size: small;
+    }
+    .big-text {
+      font-size: xx-large;
+    }
+  </style>
+  <div id="target" class="small-text">Hello</div>
+  <input type="button" onclick="changeClass()">스타일 변경</input>
+  <ul>
+    <li class="item">1</li>
+    <li class="item">2</li>
+    <li class="item">3</li>
+    <li class="item">4</li>
+  </ul>
+// queryselector, queryselectorAll (css를 찾아냄);
+// #target이나 .small-text나 button이나 
+
+  <script>
+    function init() {
+      console.log();
+    }
+
+    function changeStyle() {
+      let $target = document.getElementById('target');
+      $target.style.color = 'yellow';
+    }
+
+    function changeClass() {
+      let $target = document.getElementById('target');
+      $target.className = 'big-text';
+    }
+    // DOM 객체에 접근(getElementById 해서 정의하면 <div id="target">Hello</div> 얘 자체를 얻는다.)
+//      document.write('Hello World! <br>');
+//      document.write('Hello World!');
+
+  </script>
+</body>
+</html>
