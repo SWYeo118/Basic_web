@@ -1,0 +1,33 @@
+<JavaScript의 특징>
+
+1. javascript에서는 var를 지금까지 많이 썼지만 사실 var는 
+var name = 'abc'
+var name = 'bcd'
+와 같이 여러 번 선언이 가능하기 때문에 중간에 변수가 바뀔 수도 있을 뿐더러 문자 type에서 숫자 type으로도 변경이 가능하기 때문에
+var 대신 let을 사용하는 편이다. let은 변화는 불가능하고 그냥 변수값의 변경만 가능하는 java 방식과 동일하게 사용가능하다.
+
+2. JavaScript의 문자 type은 모두 string이고 숫자 type은 모두 number로 통일되어있다. 타입이 궁금하면 typeof 함수롤 사용할 수 있다.
+
+3. console.log()를 사용하면 결과값을 브라우저의 console창에서 확인 가능하다. 브라우저의 콘솔창은 실제 JavaScript가 구동되기 때문에 이를 미리 테스트 해 볼수도 있다.
+   브라우저 콘솔 창 접근은 크롬 기준으로 F12 버튼이다.
+
+4. JavaScript에서 문자와 변수를 함께 입력하는 방법은 println을 사용하는 방법과 동일한 방법이 있고, 또 다른 쉬운 방법이 있다.
+    result = name + '는' + age + '살입니다';    -> 이 방법이 println과 동일한 방법.
+    result = `${name}는 ${age}살입니다.`;       -> 이 방법은 변수 부분에 ${}를 사용하면 되는데 대신 감쌀 때 ''가 아니라 ``를 사용하는 점이 다른점이다.
+    ''는 작은 따옴표로 enter키 옆에 있는것이고 ``는 1키 옆에 있는 것으로 prime이며 영타로 칠 때만 칠 수 있다.(한글일때는 ₩로 입력이 된다.)
+
+5.  JavaScript에서 Class 대신 사용하는 것은 Object(JSON 형태)인데 아래와 같이 사용할 수 있다.
+    let person = {
+      name: '여상우',
+      age: 29               // 보면 ;도 안써도 되는 듯??
+    }
+    console.log(person);    // person이란 class를 console.log로 출력한 형태
+
+6. input을 받을 때 JS에서는 prompt를 사용. let input = prompt('이름 입력', '이름을 입력해주세요');와 같이 쓰게되면
+   윗부분 설명부분에 '이름 입력'이 들어가고, 입력창에는 '이름을 입력해주세요'가 들어가게 된다.
+   대신 prompt는 받은 값이 무조건 string으로 받아지기 때문에 이것이 문자인지 숫자인지를 판단하기 위해서는 Number 함수나 typeof 함수를 사용해야 한다.
+   Number 함수는 사용하면 숫자값은 그냥 그 숫자를 받고, 문자의 경우에는 NaN을 표시하는데 이는 'Not a Number'의 약자이다.
+   특히 'isNaN' 함수를 사용하면 isNaN(숫자) === false 값이 나오고, isNaN(문자) === true가 나오게 된다.
+
+
+7. JS에서는 ==는 '값만을 비교'해서 같은지 아닌지를 보기 때문에(타입은 비교하지 않는다) Java때와 같이 엄격하게 비교하기 위해서는 ===를 사용해야 한다.
