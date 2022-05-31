@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <script>
+  let input = prompt('이름 입력', '이름을 입력해주세요');
+  // ==은 값만 비교해서 ~~과 같다. java처럼 쓰려면 ===을 써야한다.
+  if (input === '' ) {
+    input = prompt('이름이 입력되지 않았습니다. 입력해주세요', '이름을 입력해주세요');
+  }
+  console.log(input);
+  alert(`${input}님 안녕하세요`);
+  </script>
+</body>
+</html>
