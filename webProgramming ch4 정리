@@ -29,5 +29,20 @@ var 대신 let을 사용하는 편이다. let은 변화는 불가능하고 그�
    Number 함수는 사용하면 숫자값은 그냥 그 숫자를 받고, 문자의 경우에는 NaN을 표시하는데 이는 'Not a Number'의 약자이다.
    특히 'isNaN' 함수를 사용하면 isNaN(숫자) === false 값이 나오고, isNaN(문자) === true가 나오게 된다.
 
-
 7. JS에서는 ==는 '값만을 비교'해서 같은지 아닌지를 보기 때문에(타입은 비교하지 않는다) Java때와 같이 엄격하게 비교하기 위해서는 ===를 사용해야 한다.
+
+8. document.write('Hello World! <br>'); 와 같이 단순 출력의 경우 document write를 사용하면 되고, 이 때는 tag도 사용할 수 있다.
+
+<DOM 접근>
+
+<div id="target" class="small-text">Hello</div>와 같이 target이라는 이름으로 id를 정의하고, class는 small-text라고 정의했다고 하면
+let A = document.getElementById('target'); 라고 했을 때 <div id="target class="small-text">Hello</div> 얘 자체를 얻는것이
+DOM(element) 접근이다.
+
+let A = document.getElementById('target');를 해서 먼저 Element에 접근한 뒤에
+A.style.color = 'yellow'; 와 같이 실행하면 해당 element의 스타일을 바로 변경할 수 있다.(여기서는 글자색을 노랑으로)
+A.className = 'big-text'; 또 이렇게 className까지도 변경이 가능하니까 다양한 속성을 접근하고 변경할 수 있다.
+
+위 방법은 element를 id나 class나 여러 방법으로 전근하는 거지만 더 쉬운 방법으로는
+
+queryselector, queryselectorAll (css를 찾아냄)을 사용하여 하나의 query(A나, .small-text나 target이나..) 또는 쿼리들을 전부 찾아낼 수 있다.
