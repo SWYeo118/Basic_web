@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js"></script>
+</head>
+<body>
+  <!-- var는 재선언이 되니까 안좋다. let은 자바와 동일하게 한 번만 선언하고 값 초기화 가능 -->
+  <!-- java와는 다르게 let 역시도 변수 형태 구분이 없기 때문에 중간에 다른 타입 변수로 선언되어버릴 수 있다. 주의 -->
+  <!-- javascript의 숫자 type은 전부 number로 통일이다. -->
+  <!-- javascript의 문자 type은 전부 srting으로 통일이다. -->
+  <input type="button" value="인사" onclick="greeting()">
+  <script>
+    function myFunc(num){
+      console.log(num);
+    }
+    let num = 10;
+    let text = 'apple';
+    let name = '여상우';
+    let age = 29;
+    let result = name + '는' + age + '살입니다';
+    // 이 방식 사용할 때 영문상태면 1옆에의 키 누르면 되고, 한글상태면 ₩가 나온다
+    result = `${name}는 ${age}살입니다.`;
+    let items = [1, 2, 3, 4];
+    for (let i = 1; i < items.length; i++) {
+      console.log(items[i]);
+    }
+    // Object(class 대신), JSON 형태
+    let person = {
+      name: '여상우',
+      age: 29
+    }
+
+    console.log(person);
+
+</script>
+</body>
+</html>
