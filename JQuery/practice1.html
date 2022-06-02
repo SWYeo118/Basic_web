@@ -30,28 +30,38 @@
   </style>
 
   <div class="container">
-    <div id="text">
-      입력이 실패했습니다.
-    </div>
+    <div id="text"></div>
     <div id="list">
-      <button class="red-box">빨강</button>
+      <button class="red-box" style="font-size: 30px; padding: 40px">빨강</button>
+      <button class="blue-box" style="font-size: 30px; padding: 40px">파랑</button>
+      <button class="green-box" style="font-size: 30px; padding: 40px">초록</button>
     </div>
   </div>
 
   <script>
     let text = prompt('텍스트 값을 입력해주세요.')
-    if (text === '' ) {
-      text = prompt('텍스트 값을 다시 입력해주세요.')
       if (text === '' ) {
-        $('#list').display = "none";
+        text = prompt('텍스트 값을 다시 입력해주세요.')
+        $('#text').text(text);
+      if (text === '' ) {
+        $('#list').css( 'display', 'none');
+        $('#text').css('font-size','120px');
       }
+    } else {
+      $('#text').text(text);
+      $('#text').css('font-size','120px');
     }
-    $('#text').innerText = text;
-    $(function () {
-      $('red-box').click(function () {
-        console.log(this);
-        alert(`붉은색으로 변경됩니다.`);
-      });
+    $('.red-box').click(function () {
+      $('#text').css('color', 'red');
+      alert(`붉은색으로 변경됩니다.`);
+    });
+    $('.blue-box').click(function () {
+      $('#text').css('color', 'blue');
+      alert(`파란색으로 변경됩니다.`);
+    });
+    $('.green-box').click(function () {
+      $('#text').css('color', 'green');
+      alert(`초록색으로 변경됩니다.`);
     });
   </script>
 </body>
