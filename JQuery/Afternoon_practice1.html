@@ -30,13 +30,29 @@
                     <td><input type="radio" value="male" name="gender" class="gender">남 <input type="radio"
                             value="female" name="gender" class="gender">여</td>
                 </tr>
+
+                <tr>
+                    <td>직업</td>
+
+                    <td>
+                        <select name="language" >
+                          <option value="none"></option>
+                          <option value="college">대학생</option>
+                          <option value="mom">주부</option>
+                          <option value="joblessGirl">백조</option>
+                          <option value="joblessMan">백수</option>
+                        </select>
+                    </td>
+
+
+                </tr>
+
                 <tr>
                     <td>취미</td>
                     <td><input type="checkbox" value="sport" name="hobby" class="hobby">운동
                         <input type="checkbox" value="trip" name="hobby" class="hobby">여행
                         <input type="checkbox" value="read" name="hobby" class="hobby">독서
-                        <input type="checkbox" value="listening" name="hobby" class="hobby">음악감
-                        <input type="checkbox" value="watching" name="hobby" class="hobby">영화감상
+                        <input type="checkbox" value="listening" name="hobby" class="hobby">음악감상
                         <input type="checkbox" value="camping" name="hobby" class="hobby">캠핑
                     </td>
                 </tr>
@@ -58,7 +74,7 @@
             signup.addEventListener('click', function () {
 
 
-                //이메일 정규식 체그 
+                //이메일 정규식 체크
                 function email_check(email) {
                     var reg = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i;
                     return reg.test(email);
@@ -115,7 +131,7 @@
                     alert("취미를 3개이상 체크해주세요.");
                     hobby[0].focus();
                 } else {
-                    location.href = "http://www.google.com";
+                  alert("회원가입이 완료되었습니다");
                 }
 
             });
