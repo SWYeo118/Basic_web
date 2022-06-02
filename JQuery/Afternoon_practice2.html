@@ -72,13 +72,12 @@
       }
     });
     $('#log_button').click(function () {
-      if ($('input:checkbox[name=chk]:checked').length > 0) {
-        var checkbox = $("input[name=chk]:checked");
+      if ($('input[name=chk]:checked').length > 0) {
+                var checkbox = $("input[name=chk]:checked");
                 checkbox.each(function (i) {
-                    let tr = checkbox.parent().parent().eq(i);
+                    let tr = checkbox.closest('tr').eq(i);
                     let td = tr.children();
                     let subject = td.eq(1).text();
-                    $('.allData').append("체크 항목 제목 : " + subject + "<br>");
                     console.log(subject);
                 });
       } else {
