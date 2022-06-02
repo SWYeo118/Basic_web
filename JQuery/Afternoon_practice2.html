@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <style>
+    table, tr, th, td {
+      border: 1px black solid;
+    }
+    table {
+      width: 600px;
+    }
+  </style>
+  <table>
+    <tr>
+      <th>
+        <input type="checkbox" name="all" id="all">확인
+      </th>
+      <th>제목</th>
+      <th>글쓴시간</th>
+    </tr>
+    <tr>
+      <td><input type="checkbox" name="chk"></td>
+      <td>[A-프리뷰] 브라질전이 친선 경기?...120% 뽐내야 할 월드컵 실전 경기</td>
+      <td align="center">16:30</td>
+    </tr>
+    <tr>
+      <td><input type="checkbox" name="chk"></td>
+      <td>[공식발표] '이대호·김광현·양현종' 포함, KBO 올스타 '베스트12' 후보 확정</td>
+      <td align="center">16:30</td>
+    </tr>
+    <tr>
+      <td><input type="checkbox" name="chk"></td>
+      <td>히딩크의 극찬 "20년 전 손흥민 있었다면 결승에 갔다"</td>
+      <td align="center">16:30</td>
+    </tr>
+    <tr>
+      <td><input type="checkbox" name="chk"></td>
+      <td>'2022 LCK' 서머, 오는 6월 15일 개막…T1은 RNG에 MSI 석패</td>
+      <td align="center">16:30</td>
+    </tr>
+    <tr>
+      <td><input type="checkbox" name="chk"></td>
+      <td>[오늘의 NBA] 파이널 프리뷰 – ‘코비 키드’ 제이슨 테이텀의 우승 도전</td>
+      <td align="center">15:30</td>
+    </tr>
+    <tr>
+      <td><input type="checkbox" name="chk"></td>
+      <td>“오늘 등판을 후회한다” 류현진 58구 부상 강판 심경[O! SPORTS]</td>
+      <td align="center">00:00</td>
+    </tr>
+  </table>
+
+  <div>
+    <input id="log_button" type="button" value="로그 보기">
+  </div>
+
+  <script>
+    $('#all').click(function () {
+      if($(this).prop('checked')){
+        $("input[name=chk]").prop("checked", true);
+      } else {
+        $("input[name=chk]").prop("checked", false);
+      }
+    });
+    $('#log_button').click(function () {
+      if ($('input:checkbox[name=chk]:checked').length > 0) {
+        var checkbox = $("input[name=chk]:checked");
+                checkbox.each(function (i) {
+                    let tr = checkbox.parent().parent().eq(i);
+                    let td = tr.children();
+                    let subject = td.eq(1).text();
+                    $('.allData').append("체크 항목 제목 : " + subject + "<br>");
+                    console.log(subject);
+                });
+      } else {
+        alert('선택된 체크박스가 없습니다');
+      }
+    });
+  </script>
+</body>
+</html>
