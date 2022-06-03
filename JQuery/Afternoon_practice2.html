@@ -65,11 +65,7 @@
 
   <script>
     $('#all').click(function () {
-      if($(this).prop('checked')){
-        $("input[name=chk]").prop("checked", true);
-      } else {
-        $("input[name=chk]").prop("checked", false);
-      }
+        $("input[name=chk]").prop("checked", this.checked);
     });
     $('#log_button').click(function () {
       if ($('input[name=chk]:checked').length > 0) {
