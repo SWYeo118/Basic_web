@@ -1,0 +1,28 @@
+.container {
+  border: 1px black solid;
+  height: 90vh;
+  position: relative;
+}
+
+#char {
+  width: 100px;
+  height: 150px;
+  position: absolute;
+  bottom: 0;
+}
+
+#chunsik {
+  width: 120px;
+  height: 100px;
+  right: 0px;
+  bottom: 0;
+  position: absolute;
+}
+
+/* #bullet {
+  width: 65px;
+  height: 65px;
+  left: 100px;
+  bottom: 20px;
+  position: absolute;
+} */
